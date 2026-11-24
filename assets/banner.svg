@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img" aria-label="codex-langgraph — Real Codex CLI workers orchestrated by LangGraph">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D1117"/>
+      <stop offset="55%" stop-color="#141B2D"/>
+      <stop offset="100%" stop-color="#1B1F3B"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A78BFA"/>
+      <stop offset="50%" stop-color="#2DD4BF"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="320" rx="18" fill="url(#bg)"/>
+  <rect x="1" y="1" width="1198" height="318" rx="17" fill="none" stroke="#26314E" stroke-width="1.5"/>
+
+  <!-- Left Title Block -->
+  <rect x="64" y="62" width="68" height="4" rx="2" fill="url(#accent)"/>
+  <text x="64" y="128" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="50" font-weight="800" fill="#F8FAFC" letter-spacing="-1">codex-langgraph</text>
+  <text x="64" y="168" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="19" fill="#94A3B8">Real Codex CLI workers orchestrated by LangGraph with approval</text>
+  <text x="64" y="194" font-family="ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="19" fill="#94A3B8">gates, Jev Lite role routing, and isolated Git worktrees</text>
+
+  <!-- Pills -->
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="600">
+    <rect x="64" y="226" width="112" height="32" rx="16" fill="#231D42" stroke="#A78BFA" stroke-opacity="0.5"/>
+    <text x="120" y="247" text-anchor="middle" fill="#DDD6FE">LangGraph</text>
+
+    <rect x="188" y="226" width="112" height="32" rx="16" fill="#102C2E" stroke="#2DD4BF" stroke-opacity="0.5"/>
+    <text x="244" y="247" text-anchor="middle" fill="#99F6E4">Codex CLI</text>
+
+    <rect x="312" y="226" width="128" height="32" rx="16" fill="#2D2310" stroke="#F59E0B" stroke-opacity="0.5"/>
+    <text x="376" y="247" text-anchor="middle" fill="#FDE68A">Git Worktree</text>
+
+    <rect x="452" y="226" width="114" height="32" rx="16" fill="#182236" stroke="#64748B" stroke-opacity="0.5"/>
+    <text x="509" y="247" text-anchor="middle" fill="#CBD5E1">MCP Bridge</text>
+  </g>
+
+  <!-- Right Workflow Graph Visual -->
+  <g transform="translate(705, 34)" font-family="ui-monospace, SFMono-Regular, monospace">
+    <!-- Connecting lines -->
+    <g stroke-width="2" fill="none">
+      <path d="M120,42 L120,76" stroke="#A78BFA"/>
+      <path d="M120,118 L120,152" stroke="#F59E0B"/>
+      <path d="M196,173 L244,173" stroke="#2DD4BF"/>
+      <path d="M326,152 L326,118" stroke="#2DD4BF"/>
+      <path d="M326,76 L326,42" stroke="#34D399"/>
+    </g>
+
+    <!-- Node 1: Planner -->
+    <rect x="30" y="8" width="180" height="36" rx="10" fill="#1C1936" stroke="#A78BFA" stroke-width="1.8"/>
+    <text x="120" y="31" text-anchor="middle" font-size="12" font-weight="700" fill="#E9D5FF">1. Planner (≤8 tasks)</text>
+
+    <!-- Node 2: Approval Gate -->
+    <rect x="30" y="78" width="180" height="40" rx="10" fill="#2B2110" stroke="#F59E0B" stroke-width="2" filter="url(#glow)"/>
+    <text x="120" y="103" text-anchor="middle" font-size="12" font-weight="700" fill="#FDE68A">2. Human Approval</text>
+
+    <!-- Node 3: Jev Lite Router -->
+    <rect x="30" y="152" width="166" height="42" rx="10" fill="#122938" stroke="#38BDF8" stroke-width="1.8"/>
+    <text x="113" y="170" text-anchor="middle" font-size="11.5" font-weight="700" fill="#BAE6FD">3. Jev Lite Router</text>
+    <text x="113" y="185" text-anchor="middle" font-size="9.5" fill="#7DD3FC">/api/coding-route</text>
+
+    <!-- Node 4: Specialist Workers -->
+    <rect x="244" y="152" width="164" height="42" rx="10" fill="#102C2E" stroke="#2DD4BF" stroke-width="2" filter="url(#glow)"/>
+    <text x="326" y="170" text-anchor="middle" font-size="11.5" font-weight="700" fill="#CCFBF1">4. Codex Workers</text>
+    <text x="326" y="185" text-anchor="middle" font-size="9.5" fill="#5EEAD4">5 specialist roles</text>
+
+    <!-- Node 5: Worktree -->
+    <rect x="244" y="78" width="164" height="40" rx="10" fill="#152238" stroke="#60A5FA" stroke-width="1.8"/>
+    <text x="326" y="103" text-anchor="middle" font-size="11.5" font-weight="700" fill="#BFDBFE">5. Isolated Worktree</text>
+
+    <!-- Node 6: Fast-Forward Commit -->
+    <rect x="244" y="8" width="164" height="36" rx="10" fill="#0E2E24" stroke="#34D399" stroke-width="1.8"/>
+    <text x="326" y="31" text-anchor="middle" font-size="11.5" font-weight="700" fill="#A7F3D0">6. Local FF Commit</text>
+
+    <!-- Status caption -->
+    <text x="219" y="232" text-anchor="middle" font-size="11" fill="#64748B">local loopback only · zero remote pushes</text>
+  </g>
+</svg>
